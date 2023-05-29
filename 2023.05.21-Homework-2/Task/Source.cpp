@@ -52,7 +52,7 @@ int naturalSelection(Animal* victim, Animal* aggressor)
 
 		(*aggressor).setPower();
 
-		return(1); // the victim is eaten by the aggressor
+		return(1);
 	}
 	else if ((exist2 and not exist1) or (exist1 and exist2 and (*victim).getPower() > (*aggressor).getPower()))
 	{
@@ -60,11 +60,11 @@ int naturalSelection(Animal* victim, Animal* aggressor)
 
 		(*victim).setPower();
 
-		return(2); // the aggressor is eaten by the victim
+		return(2);
 	}
 	else
 	{
-		return(0); // no one die
+		return(0);
 	}
 }
 
@@ -112,6 +112,5 @@ int main(int argc, char* argv[])
 
 		zoo[i] = new Animal(type, name, pow);
 	}
-
 	return EXIT_SUCCESS;
 }
